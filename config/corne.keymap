@@ -50,17 +50,17 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q                &kp W              &kp F  &kp P      &kp B               &kp J           &kp L             &kp U             &kp Y    &kp SEMICOLON  &mtl LGUI A      &mtl LEFT_ALT R
-&mtl LEFT_CONTROL S  &mtl LEFT_SHIFT T  &kp G  &kp M      &mtr RIGHT_SHIFT N  &mtr RCTRL E    &mtr RIGHT_ALT I  &mtr RIGHT_GUI O  &kp Z    &kp X          &kp C            &kp D
-&kp V                &kp K              &kp H  &kp COMMA  &kp PERIOD          &kp SLASH       &kp ESCAPE        &kp SPACE         &kp TAB  &lt 1 RET      &lt 2 BACKSPACE  &kp ESCAPE
+&kp Q                &kp W              &kp F                         &kp P                          &kp B               &kp J           &kp L             &kp U             &kp Y    &kp SEMICOLON  &mtl LGUI A      &mtl LEFT_ALT R
+&mtl LEFT_CONTROL S  &mtl LEFT_SHIFT T  &mt LA(LC(LG(LEFT_SHIFT))) G  &mt RA(RC(RG(RIGHT_SHIFT))) M  &mtr RIGHT_SHIFT N  &mtr RCTRL E    &mtr RIGHT_ALT I  &mtr RIGHT_GUI O  &kp Z    &kp X          &kp C            &kp D
+&kp V                &kp K              &kp H                         &kp COMMA                      &kp PERIOD          &kp SLASH       &kp ESCAPE        &kp SPACE         &kp TAB  &lt 1 RET      &lt 2 BACKSPACE  &kp ESCAPE
             >;
         };
 
         symbols {
             bindings = <
-&kp LS(LBRC)   &kp LS(AMPS)   &kp LS(STAR)  &kp LBKT  &kp LS(RBRC)  &trans    &trans  &trans        &trans         &trans        &kp LS(COLON)  &kp LS(DLLR)
-&kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)  &trans    &trans        &trans    &trans  &trans        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)
-&kp LS(PIPE)   &trans         &trans        &trans    &trans        &trans    &to 0   &kp LS(LPAR)  &kp LS(UNDER)  &trans        &trans         &trans
+&kp LS(LBRC)   &kp LS(AMPS)   &kp LS(STAR)  &kp ASTERISK  &kp LS(RBRC)  &trans    &trans  &trans        &trans         &trans        &kp LS(COLON)  &kp LS(DLLR)
+&kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)  &trans        &trans        &trans    &trans  &trans        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)
+&kp LS(PIPE)   &trans         &trans        &trans        &trans        &trans    &to 0   &kp LS(LPAR)  &kp LS(UNDER)  &trans        &trans         &trans
             >;
         };
 
