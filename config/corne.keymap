@@ -65,9 +65,9 @@
 
         symbols {
             bindings = <
-&kp LS(LBRC)   &kp LS(AMPS)   &kp LS(STAR)  &kp ASTERISK  &kp LS(RBRC)  &trans    &trans     &trans        &trans         &trans        &kp LS(COLON)  &kp LS(DLLR)
-&kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)  &trans        &trans        &trans    &trans     &trans        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)
-&kp LS(PIPE)   &trans         &trans        &trans        &trans        &trans    &kp GRAVE  &kp LS(LPAR)  &kp LS(UNDER)  &trans        &trans         &trans
+&kp LS(LBRC)   &kp LS(AMPS)   &kp LS(STAR)  &kp ASTERISK  &kp LS(RBRC)  &trans    &trans            &trans        &trans         &trans        &kp LS(COLON)  &kp LS(DLLR)
+&kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)  &trans        &trans        &trans    &trans            &trans        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)
+&kp LS(PIPE)   &trans         &trans        &trans        &trans        &trans    &kp SINGLE_QUOTE  &kp LS(LPAR)  &kp LS(UNDER)  &trans        &trans         &trans
             >;
         };
 
