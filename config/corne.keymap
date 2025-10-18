@@ -41,6 +41,24 @@
             hold-trigger-on-release;
             flavor = "balanced";
         };
+
+        tap_dance_paranthesis: tap_dance_paranthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_PARANTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        lt_repeat: lt_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_REPEAT";
+            bindings = <&tog>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <125>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -49,6 +67,8 @@
         ultimate-mod {
             bindings = <&sk LC(Q)>;
             key-positions = <30 35>;
+            slow-release;
+            layers = <0>;
         };
     };
 
@@ -58,17 +78,17 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q                &kp W              &kp F                          &kp P                           &kp B               &kp J           &kp L             &kp U             &kp Y      &kp SEMICOLON  &mtl LGUI A      &mtl LEFT_ALT R
-&mtl LEFT_CONTROL S  &mtl LEFT_SHIFT T  &mtl LA(LC(LG(LEFT_SHIFT))) G  &mtr RA(RC(RG(RIGHT_SHIFT))) M  &mtr RIGHT_SHIFT N  &mtr RCTRL E    &mtr RIGHT_ALT I  &mtr RIGHT_GUI O  &kp Z      &kp X          &kp C            &kp D
-&kp V                &kp K              &kp H                          &kp COMMA                       &kp PERIOD          &kp SLASH       &lt 5 ESCAPE      &lt 3 SPACE       &lt 4 TAB  &lt 1 RET      &lt 2 BACKSPACE  &kp ESCAPE
+&kp Q                &kp W              &kp F                          &kp P                           &kp B               &kp J           &kp L             &kp U             &kp Y      &kp SEMICOLON  &mtl LGUI A             &mtl LEFT_ALT R
+&mtl LEFT_CONTROL S  &mtl LEFT_SHIFT T  &mtl LA(LC(LG(LEFT_SHIFT))) G  &mtr RA(RC(RG(RIGHT_SHIFT))) M  &mtr RIGHT_SHIFT N  &mtr RCTRL E    &mtr RIGHT_ALT I  &mtr RIGHT_GUI O  &kp Z      &kp X          &kp C                   &kp D
+&kp V                &kp K              &kp H                          &kp COMMA                       &kp PERIOD          &kp SLASH       &lt 5 ESCAPE      &lt 3 SPACE       &lt 4 TAB  &lt 1 RET      &lt_repeat 2 BACKSPACE  &kp ESCAPE
             >;
         };
 
         symbols {
             bindings = <
-&kp LS(LBRC)   &kp LS(AMPS)   &kp LS(STAR)  &kp ASTERISK  &kp LS(RBRC)  &trans    &trans            &trans        &trans         &trans        &kp LS(COLON)  &kp LS(DLLR)
-&kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)  &trans        &trans        &trans    &trans            &trans        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)
-&kp LS(PIPE)   &trans         &trans        &trans        &trans        &trans    &kp SINGLE_QUOTE  &kp LS(LPAR)  &kp LS(UNDER)  &trans        &trans         &trans
+&kp LS(LBRC)   &kp LS(AMPS)   &kp LS(STAR)  &kp ASTERISK  &kp LS(RBRC)  &trans    &trans            &trans                  &trans         &trans        &kp LS(COLON)  &kp LS(DLLR)
+&kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)  &trans        &trans        &trans    &trans            &trans                  &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)
+&kp LS(PIPE)   &trans         &trans        &trans        &trans        &trans    &kp SINGLE_QUOTE  &tap_dance_paranthesis  &kp LS(UNDER)  &trans        &trans         &trans
             >;
         };
 
